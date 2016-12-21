@@ -10,3 +10,12 @@ func HasOneOfSuffixes(str string, suffixes []string) bool {
 	}
 	return false
 }
+
+func FileExtension(str string) string {
+	for i := len(str) - 1; i > -1; i-- {
+		if str[i] == '.' {
+			return str[i+1 : len(str)]
+		}
+	}
+	return ""
+}
